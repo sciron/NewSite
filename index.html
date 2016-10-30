@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content=""/>
+  <meta name="author" content=""/>
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Заказать такси в Сочи</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet"/>
+
+  <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/moment-with-locales.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap-datetimepicker.min.js" type="text/javascript" ></script>
+
+  <script type="text/javascript">
+    function getDirection() {
+    var _From = document.getElementById('DirectionFrom').value;
+    var _To = document.getElementById('DestinationTo').value;
+    var modalFrom = document.getElementById('modalFrom');
+    var modalTo = document.getElementById('modalTo');
+    modalFrom.value = _From;
+    modalTo.value = _To;
+  }
+  </script>
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <span class="navbar-brand" href="#">
+        Такси Катран
+        </span>
+      </div>
+
+      <ul class="nav nav-pills pull-right">
+        <li role="presentation" class="active"><a href="#">Главная</a></li>
+        <li role="presentation"><a href="#">Контакты</a></li>
+        <li role="presentation"><a href="#">О компании</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-md-12">
+          <div class="col-md-6">
+              <span id="directionSpan">Откуда:</span> 
+              <input list="Direction" class="form-control" id="DirectionFrom"></input>
+          </div>
+          <div class="col-md-6">
+              <span id="destinationSpan">Куда:</span> 
+              <input list="Direction" class="form-control" id="DestinationTo"></input>
+          </div>
+          <datalist id="Direction">
+            <option>Аэропорт</option>
+            <option>Адлер</option>
+            <option>Дагомыс</option>
+            <option>Красная поляна</option>
+            <option>Краснодар</option>
+            <option>Кудепста</option>
+            <option>Лазаревское</option>
+            <option>Лоо</option>
+            <option>Олимпийский парк</option>
+            <option>Псоу</option>
+            <option>Сочи</option>
+            <option>Туапсе</option>
+            <option>Хоста</option>
+          </datalist>  
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+          <button type="button" class="btn btn-lg btn-success" data-toggle="modal" onclick="getDirection()" data-target="#ZakazModal">Заказать такси</button>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <h1>Заказать такси в Сочи</h1>
+    </div>
+    <p class="lead">На сайте можно оформить заказ такси онлайн, заказать машину с водителем от эконом до представительского класса, арендовать микроавтобусы для поездок по Сочи и краю.</p>
+    <form>
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="col-md-4">
+          <input type="text" name="Номер телефона" placeholder="Ваш номер телефона" class="form-control"/>
+          </div>
+        </div>
+      </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-4">
+        <button type="button" class="btn btn-lg btn-warning" data-toggle="modal" data-target="#ZakazModal">Заказать звонок</button>
+        </div>
+      </div>
+    </div>
+    </form>
+  </div> 
+  <!---End Jumbotron-->
+
+  <!--Start ModalLayer ZakazTaxi-->
+
+  <div class="modal fade" id="ZakazModal" tabindex="-1" role="dialog" aria-labelledby="ZakazModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="ZakazModalLabel">On-line заказ такси</h4>
+        </div>
+        <div class="modal-body"> 
+
+          <div class="row"> 
+            <div class="col-md-12 text-center"> 
+              <label class="sr-only" for="Name">Ваше имя</label> 
+              <input type="text" class="form-control" id="Name" placeholder="Ваше имя"> 
+            </div>     
+          </div> 
+
+          <div class=row> 
+            <div class="col-md-12 text-center"> 
+              <label class="sr-only" for="Phone">Номер телефона</label> 
+              <input type="text" class="form-control" id="Phone" placeholder="Номер телефона"> 
+            </div> 
+          </div> 
+
+          <div class="row">
+                <div class="col-md-6">
+                    <span id="directionSpan">Откуда:</span> 
+                    <input list="Direction" class="form-control" id="modalFrom"></input>
+                </div>
+                <div class="col-md-6">
+                    <span id="destinationSpan">Куда:</span> 
+                    <input list="Direction" class="form-control" id="modalTo"></input>
+                </div>
+          </div>
+
+          <div class="row"> 
+            <div class="col-md-6 text-center"> 
+              <div class="form-group"> 
+                <label class="sr-only" for="Data">Дата</label> 
+                <input type="text" class="form-control" id="Date" placeholder="Дата"> 
+              </div> 
+            </div> 
+            <div class="col-md-6 text-center"> 
+              <div class="form-group"> 
+                <label class="sr-only" for="Time">Время</label> 
+                <input type="text" class="form-control" id="Time" placeholder="Время"> 
+              </div> 
+            </div> 
+          </div> 
+
+        <script type="text/javascript"> 
+        $(function() { 
+        $('#Data').datetimepicker({ 
+        pickTime: false, 
+        language: 'ru' 
+        }); 
+        }); 
+        </script> 
+        <script type="text/javascript"> 
+        $(function() { 
+        $('#Time').datetimepicker({ 
+        pickDate: false, 
+        language: 'ru' 
+        }); 
+        }); 
+        </script> 
+
+          </div> 
+            <div class="modal-footer"> 
+              <div class="row"> 
+                <div class="col-md-12 text-center"> 
+                  <button type="button" class="btn btn-primary">Отправить заявку</button> 
+                </div> 
+              </div> 
+              <div class="row"> 
+                <div class="col-md-12 text-center"> 
+                <p class="small">Введите данные и нажмите "Отправить заявку". Наши операторы перезвонят Вам в течении 10 минут</p> 
+                </div> 
+              </div> 
+            </div>
+   
+          </div>
+        </div>
+            
+          </form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End ModalLayer ZakazTaxi-->
+
+<!--TarifTable-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+            <div class="text-center"> 
+              <h3>Цены на такси в Сочи</h3>
+            </div>
+              <table class="table"> 
+                  <thead> <tr> <th>Направление</th> <th>Тариф</th> <th>Направление</th> <th>Тариф</th> </tr> </thead> 
+                  <tbody> 
+                  <tr class="active"> <td scope="row">Аэропорт - Адлер</td> <td>500</td>  <td>Аэропорт - Дагомыс</td> <td>1500</td> </tr>
+                  <tr> <td scope="row">Аэропорт - Хоста</td> <td>700</td> <td>Лоо</td> <td>1700</td> </tr>
+                  <tr class="success"> <td scope="row">Аэропорт - Сочи</td> <td>900-100</td> <td>Лазаревское</td> <td>3300</td> </tr>
+                  <tr> <td scope="row">Аэропорт - Псоу</td> <td>700</td> <td>Туапсе</td> <td>4500</td> </tr>
+                  <tr class="info"> <td scope="row">Аэропорт - Красная поляна</td> <td>1300</td> <td>Краснодар</td> <td>9500</td> </tr>
+                  </tbody>
+              </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="container marketing">
+
+        <!-- Three columns of text below the jumbotron -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="col-md-4">
+              <div class="text-center">
+                <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+              </div>
+              <h2>Такси дешево</h2>
+              <p>Доступная цена поездок. Куда бы ни пришлось ехать нашему клиенту, Сочи,  на вокзал, в  аэропорт, Красную поляну - заказ такси предполагает прозрачный расчет стоимости поездки. Ездить с нами удобно и дешево.</p>
+              <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+            </div>
+            <div class="col-md-4">
+              <div class="text-center">
+                <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+              </div>
+              <h2>Безупречный сервис</h2>
+              <p>Такси Катран в Сочи работает по стандартам, которые не уступают мировым. Автомобильный парк включает только новые иномарки. Опытные и вежливые водители такси, внимательные и предупредительные диспетчеры - ваш комфорт для нас на первом месте.</p>
+              <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+            </div>
+            <div class="col-md-4">
+              <div class="text-center">
+                <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+              </div>
+              <h2>Встреча в аэропорту</h2>
+              <p>Заказ такси в аэропорт Сочи больше не является проблемой. Такси будет подано точно ко времени, оговоренному заранее. Больше не нужно искать такси в аэропорту Сочи и беспокоится о ценах. Такси Катран всегда приезжают на место без опозданий.</p>
+              <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzUwMHg1MDAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1N2UzMTY5YWE5IHRleHQgeyBmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTU3ZTMxNjlhYTkiPjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjRUVFRUVFIi8+PGc+PHRleHQgeD0iMTg1LjE0ODQzNzUiIHk9IjI2MS40Ij41MDB4NTAwPC90ZXh0PjwvZz48L2c+PC9zdmc+" data-holder-rendered="true">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7 col-md-push-5">
+            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          </div>
+          <div class="col-md-5 col-md-pull-7">
+            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzUwMHg1MDAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1N2UzMTY3YTVhIHRleHQgeyBmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTU3ZTMxNjdhNWEiPjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjRUVFRUVFIi8+PGc+PHRleHQgeD0iMTg1LjE0ODQzNzUiIHk9IjI2MS40Ij41MDB4NTAwPC90ZXh0PjwvZz48L2c+PC9zdmc+" data-holder-rendered="true">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzUwMHg1MDAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1N2UzMTZhYTNlIHRleHQgeyBmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTU3ZTMxNmFhM2UiPjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjRUVFRUVFIi8+PGc+PHRleHQgeD0iMTg1LjE0ODQzNzUiIHk9IjI2MS40Ij41MDB4NTAwPC90ZXh0PjwvZz48L2c+PC9zdmc+" data-holder-rendered="true">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+
+        <!-- FOOTER -->
+        <footer>
+          <p class="pull-right"><a href="#">Back to top</a></p>
+          <p>© 2016 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        </footer>
+
+  </div> <!-- /container -->
+</body>
+</html>
