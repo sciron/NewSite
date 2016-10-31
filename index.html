@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,80 +34,115 @@
 
 <body>
 
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-header">
-        <span class="navbar-brand" href="#">
-        Такси Катран
-        </span>
-      </div>
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">Brand</a>
+	    </div>
 
-      <ul class="nav nav-pills pull-right">
-        <li role="presentation" class="active"><a href="#">Главная</a></li>
-        <li role="presentation"><a href="#">Контакты</a></li>
-        <li role="presentation"><a href="#">О компании</a></li>
-      </ul>
-    </div>
-  </nav>
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	 
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#">Тарифы</a></li>
+	        <li><a href="#">О компании</a></li>
+	        <li><a href="#">Контакты</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+
+	<div class="container">
+	  <form>
+	    <fieldset>
+	      <div class="row">
+	        <div class="col-md-12 text-center">
+
+	          <div class="col-md-6">
+	            <div class="form-group">
+	              <span id="directionSpan">Откуда:</span> 
+	              <input list="Direction" class="form-control" id="DirectionFrom"></input>
+	            </div>
+	          </div>
+
+	          <div class="col-md-6">
+	            <div class="form-group">
+	              <span id="destinationSpan">Куда:</span> 
+	              <input list="Direction" class="form-control" id="DestinationTo"></input>
+	            </div>
+	          </div>
+
+	          <datalist id="Direction">
+	            <option>Аэропорт</option>
+	            <option>Адлер</option>
+	            <option>Дагомыс</option>
+	            <option>Красная поляна</option>
+	            <option>Краснодар</option>
+	            <option>Кудепста</option>
+	            <option>Лазаревское</option>
+	            <option>Лоо</option>
+	            <option>Олимпийский парк</option>
+	            <option>Псоу</option>
+	            <option>Сочи</option>
+	            <option>Туапсе</option>
+	            <option>Хоста</option>
+	          </datalist>
+	      </div>
+	      
+	      <div class="row">
+	        <div class="col-md-12 text-center">
+	            <div class="form-group">
+	              <button type="button" class="btn btn-lg btn-success" data-toggle="modal" onclick="getDirection()" data-target="#ZakazModal">Заказать такси</button>
+	            </div>
+	        </div>
+
+	      </div>
+	    </fieldset>
+	  </form>
+	</div>
 
   <div class="container">
 
-  <div class="jumbotron">
-    <div class="row">
-      <div class="col-md-12">
-          <div class="col-md-6">
-              <span id="directionSpan">Откуда:</span> 
-              <input list="Direction" class="form-control" id="DirectionFrom"></input>
-          </div>
-          <div class="col-md-6">
-              <span id="destinationSpan">Куда:</span> 
-              <input list="Direction" class="form-control" id="DestinationTo"></input>
-          </div>
-          <datalist id="Direction">
-            <option>Аэропорт</option>
-            <option>Адлер</option>
-            <option>Дагомыс</option>
-            <option>Красная поляна</option>
-            <option>Краснодар</option>
-            <option>Кудепста</option>
-            <option>Лазаревское</option>
-            <option>Лоо</option>
-            <option>Олимпийский парк</option>
-            <option>Псоу</option>
-            <option>Сочи</option>
-            <option>Туапсе</option>
-            <option>Хоста</option>
-          </datalist>  
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 text-center">
-          <button type="button" class="btn btn-lg btn-success" data-toggle="modal" onclick="getDirection()" data-target="#ZakazModal">Заказать такси</button>
-      </div>
-    </div>
-
+ 	<div class="jumbotron">
+    	<div class="text-center">
+     		<h1>Заказать такси в Сочи</h1>
+    	</div>
     <div class="text-center">
-      <h1>Заказать такси в Сочи</h1>
+      <p class="lead">+7 963-164-59-49 Билайн</p>
+      <p class="lead">+7 918-607-18-40 МТС</p>
     </div>
-    <p class="lead">На сайте можно оформить заказ такси онлайн, заказать машину с водителем от эконом до представительского класса, арендовать микроавтобусы для поездок по Сочи и краю.</p>
-    <form>
-      <div class="row">
-        <div class="col-md-12">
+    <div class="text-center">
 
-          <div class="col-md-4">
-          <input type="text" name="Номер телефона" placeholder="Ваш номер телефона" class="form-control"/>
-          </div>
-        </div>
-      </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="col-md-4">
-        <button type="button" class="btn btn-lg btn-warning" data-toggle="modal" data-target="#ZakazModal">Заказать звонок</button>
-        </div>
-      </div>
+    <p class="lead text-info">Вы можете оформить заказ такси онлайн, позвонить по указанным телефонам, либо оставить свой номер и мы Вам перезвоним.</p>
     </div>
-    </form>
-  </div> 
+	  <div class="row">
+	   <div class="col-md-12">
+	    <form>
+	    <div class="row">
+	     <div class="col-md-12">
+	      	<div class="col-md-6">
+	          <input type="text" name="Номер телефона" placeholder="Ваш номер телефона" class="form-control"/>
+	        </div>
+	        
+	    </div>
+	    </div>
+	    <div class="row">
+	    	<div class="col-md-12">
+	    		 <div class="col-md-6 text-center">
+	        <button type="button" class="btn btn-lg btn-warning" data-toggle="modal" data-target="#ZakazModal">Заказать обратный звонок</button>
+	    	 </div>
+	    	</div>
+	    </div>
+	   
+	    </form>
+	    </div>
+	   </div> 
+ 	 </div> 
   <!---End Jumbotron-->
 
   <!--Start ModalLayer ZakazTaxi-->
@@ -164,7 +200,7 @@
 
         <script type="text/javascript"> 
         $(function() { 
-        $('#Data').datetimepicker({ 
+        $('#Date').datetimepicker({ 
         pickTime: false, 
         language: 'ru' 
         }); 
@@ -227,12 +263,13 @@
 
   <div class="container marketing">
 
-        <!-- Three columns of text below the jumbotron -->
+        
+           <!-- Three columns of text below the jumbotron -->
         <div class="row">
           <div class="col-md-12">
             <div class="col-md-4">
               <div class="text-center">
-                <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+                <img class="img-circle" src="image/money.png" alt="Дешевое такси в Сочи" width="140" height="140">
               </div>
               <h2>Такси дешево</h2>
               <p>Доступная цена поездок. Куда бы ни пришлось ехать нашему клиенту, Сочи,  на вокзал, в  аэропорт, Красную поляну - заказ такси предполагает прозрачный расчет стоимости поездки. Ездить с нами удобно и дешево.</p>
@@ -240,7 +277,7 @@
             </div>
             <div class="col-md-4">
               <div class="text-center">
-                <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+                <img class="img-circle" src="image/medal.png" alt="Хорошее такси в Сочи" width="140" height="140">
               </div>
               <h2>Безупречный сервис</h2>
               <p>Такси Катран в Сочи работает по стандартам, которые не уступают мировым. Автомобильный парк включает только новые иномарки. Опытные и вежливые водители такси, внимательные и предупредительные диспетчеры - ваш комфорт для нас на первом месте.</p>
@@ -248,7 +285,7 @@
             </div>
             <div class="col-md-4">
               <div class="text-center">
-                <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+                <img class="img-circle" src="image/aeroplane.png" alt="Такси из Аэропорта Сочи" width="140" height="140">
               </div>
               <h2>Встреча в аэропорту</h2>
               <p>Заказ такси в аэропорт Сочи больше не является проблемой. Такси будет подано точно ко времени, оговоренному заранее. Больше не нужно искать такси в аэропорту Сочи и беспокоится о ценах. Такси Катран всегда приезжают на место без опозданий.</p>
