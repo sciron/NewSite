@@ -97,7 +97,7 @@
 		      <div class="row">
 		        <div class="col-md-12 text-center">
 		            <div class="form-group">
-		              <button type="button" class="btn btn-lg btn-success" data-toggle="modal" onclick="getDirection()" data-target="#ZakazModal">Заказать такси</button>
+		              <button type="button" class="btn btn-lg btn-success btn-sm" data-toggle="modal" onclick="getDirection()" data-target="#ZakazModal">Заказать такси</button>
 		            </div>
 		        </div>
 
@@ -117,30 +117,22 @@
 	      <p class="lead">+7 963-164-59-49 Билайн</p>
 	      <p class="lead">+7 918-607-18-40 МТС</p>
 	    </div>
-	    <div class="col-md-8 text-center">
-	    <p class="lead text-info"><small>Вы можете оформить заказ такси онлайн, позвонить по указанным телефонам, либо оставить свой номер и мы Вам перезвоним.</small></p>
+	    <div class="col-md-3 col-md-offset-5 text-center">
+	    	<form>
+	    		<fieldset>
+	    			<div class="form-group">
+	    				<input type="text" name="PhoneNumber" placeholder="Ваш номер телефона" class="form-control"/>
+	    			</div>
+	    			<div class="form-group">
+	    				<button type="button" class="btn btn-lg btn-warning" data-toggle="modal" data-target="#ZakazModal">Перезвоните мне</button>
+	    			</div>
+	    		</fieldset>
+	    	</form>
 	    </div>
     </div>
 	  <div class="row">
 	   <div class="col-md-12">
-	    <form>
-	    <div class="row">
-	     <div class="col-md-12">
-	      	<div class="col-md-6">
-	          <input type="text" name="Номер телефона" placeholder="Ваш номер телефона" class="form-control"/>
-	        </div>
-	        
-	    </div>
-	    </div>
-	    <div class="row">
-	    	<div class="col-md-12">
-	    		 <div class="col-md-6 text-center">
-	        <button type="button" class="btn btn-lg btn-warning" data-toggle="modal" data-target="#ZakazModal">Заказать обратный звонок</button>
-	    	 </div>
-	    	</div>
-	    </div>
-	   
-	    </form>
+	     <p class="lead text-info"><small>Вы можете оформить заказ такси онлайн, позвонить по указанным телефонам, либо оставить свой номер и мы Вам перезвоним.</small></p>	   
 	    </div>
 	   </div> 
  	 </div> 
