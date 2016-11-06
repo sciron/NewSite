@@ -43,15 +43,16 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="#">Brand</a>
+	      <a class="navbar-brand" href="#">Такси "Катран" Сочи</a>
 	    </div>
 
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	 
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#">Тарифы</a></li>
-	        <li><a href="#">О компании</a></li>
-	        <li><a href="#">Контакты</a></li>
+	      	<li><a href="index.html">Главная</a></li>
+	        <li><a href="tarif.html">Тарифы</a></li>
+	        <li><a href="about.html">О компании</a></li>
+	        <li><a href="contact.html">Контакты</a></li>
 	      </ul>
 	    </div>
 	  </div>
@@ -113,61 +114,67 @@
      		<h1>Заказать такси в Сочи</h1>
     	</div>
     	<div class="row">
-	<div class="col-md-12">
-		<div class="col-md-6 text-center">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="panel panel-danger">
-				  			<div class="panel-heading">
-				    			<h3 class="panel-title">МТС</h3>
-				  			</div>
-				  			<div class="panel-body">
-				    			<p class="lead">+ 7 918-607-18-40</p>
-				  			</div>
+		    <div class="col-md-12 text-center">
+		     	<p class="text-info"><small>Вы можете оформить заказ такси онлайн, позвонить по указанным телефонам, либо оставить свой номер и мы Вам перезвоним.</small></p>	   
+		    </div>
+		</div>
+    	<div class="row">
+			<div class="col-md-12">
+				<div class="col-md-6 text-center">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="panel panel-danger">
+						  			<div class="panel-heading">
+						    			<h3 class="panel-title">МТС</h3>
+						  			</div>
+						  			<div class="panel-body">
+						    			<p class="lead">+ 7 918-607-18-40</p>
+						  			</div>
+								</div>
+							</div>	
+							<div class="col-md-6">
+								<div class="panel panel-warning">
+							  		<div class="panel-heading">
+							    		<h3 class="panel-title">Билайн</h3>
+							  		</div>
+							  		<div class="panel-body">
+							    		<p class="lead">+ 7 963-164-59-49</p>
+							  		</div>
+								</div>	
+							</div>
 						</div>
-					</div>	
-					<div class="col-md-6">
-						<div class="panel panel-warning">
-					  		<div class="panel-heading">
-					    		<h3 class="panel-title">Билайн</h3>
-					  		</div>
-					  		<div class="panel-body">
-					    		<p class="lead">+ 7 963-164-59-49</p>
-					  		</div>
-						</div>	
+						<div class="row">
+							<form>
+			    				<fieldset>
+			    					<div class="form-group">
+			    						<input type="text" name="PhoneNumber" placeholder="Ваш номер телефона" class="form-control"/>
+			    					</div>
+			    					<div class="form-group">
+			    						<button type="button" class="btn btn-lg btn-success btn-sm" data-toggle="modal" data-target="#ZakazModal">Перезвоните мне</button>
+			    					</div>
+			    				</fieldset>
+			    			</form>
+						</div>				
 					</div>
 				</div>
-				<div class="row">
-					<form>
-	    				<fieldset>
-	    					<div class="form-group">
-	    						<input type="text" name="PhoneNumber" placeholder="Ваш номер телефона" class="form-control"/>
-	    					</div>
-	    					<div class="form-group">
-	    						<button type="button" class="btn btn-lg btn-success btn-sm" data-toggle="modal" data-target="#ZakazModal">Перезвоните мне</button>
-	    					</div>
-	    				</fieldset>
-	    			</form>
-				</div>				
-			</div>
-		</div>
-		<div class="col-md-6 hidden-xs">
-			<div class="container">
-				<div class="row">
-					<blockquote>
-						<p>- Встреча в Аэропорту <cite title="Source Title">Сочи</cite></p>
-						<p>- Бесплатное ожидание</p>
-						<p>- Фиксированные тарифы</p>
-						<p>- Гарантированная подача такси в указаное время</p>
-						<p>- Детское удерживающее устройство</p>
-						<p>- Только иномарки  с кондиционерами</p>
-					</blockquote>
+				<div class="col-md-6 hidden-xs">
+					<div class="container">
+						<div class="row">
+							<blockquote>
+
+								<p><small>Встреча в Аэропорту <cite title="Source Title">Сочи</cite> </small></p>
+								<p><small>Бесплатное ожидание</small></p>
+								<p><small>Фиксированные тарифы</small></p>
+								<p><small>Гарантированная подача такси в указаное время</small></p>
+								<p><small>Детское удерживающее устройство</small></p>
+								<p><small>Только иномарки  с кондиционерами</small></p>
+							</blockquote>
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
-	</div> 
- 	 </div> 
+			</div> 
+ 	 	</div> 
   <!---End Jumbotron-->
 
   <!--Start ModalLayer ZakazTaxi-->
@@ -266,29 +273,51 @@
   <!--End ModalLayer ZakazTaxi-->
 
 <!--TarifTable-->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-            <div class="text-center"> 
-              <h3>Цены на такси в Сочи</h3>
-            </div>
-              <table class="table"> 
-                  <thead> <tr> <th>Направление</th> <th>Тариф</th> <th>Направление</th> <th>Тариф</th> </tr> </thead> 
+  	<div class="container">
+    	<div class="row">
+          <div class="col-md-12">
+              <div class="text-center"> 
+                  <h3 style="font-family:Philosopher">Цены на такси в Сочи</h3>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="col-md-6">
+                <table class="table" style="font-size: 14px"> 
+                  <thead> <tr> <th>Направление</th> <th>Тариф</th> </tr> </thead> 
                   <tbody> 
-                  <tr class="active"> <td scope="row">Аэропорт - Адлер</td> <td>500</td>  <td>Аэропорт - Дагомыс</td> <td>1500</td> </tr>
-                  <tr> <td scope="row">Аэропорт - Хоста</td> <td>700</td> <td>Лоо</td> <td>1700</td> </tr>
-                  <tr class="success"> <td scope="row">Аэропорт - Сочи</td> <td>900-100</td> <td>Лазаревское</td> <td>3300</td> </tr>
-                  <tr> <td scope="row">Аэропорт - Псоу</td> <td>700</td> <td>Туапсе</td> <td>4500</td> </tr>
-                  <tr class="info"> <td scope="row">Аэропорт - Красная поляна</td> <td>1300</td> <td>Краснодар</td> <td>9500</td> </tr>
+                  <tr class="active"> <td scope="row">Аэропорт - Адлер</td> <td>500</td> </tr>
+                  <tr> <td scope="row">Аэропорт - Хоста</td> <td>700</td> </tr>
+                  <tr class="success"> <td scope="row">Аэропорт - Сочи</td> <td>900-1100</td></tr>
+                  <tr> <td scope="row">Аэропорт - Псоу</td> <td>700</td></tr>
+                  <tr class="active"> <td scope="row">Аэропорт - Красная поляна</td> <td>1300</td></tr>
+                  <tr> <td scope="row">Аэропорт - Роза Хутор</td> <td>1500 </td></tr>
+                  <tr class="success"> <td scope="row">Аэропорт - Олимпийский парк</td> <td>600</td></tr>
                   </tbody>
-              </table>
+                </table>
+              </div>
+              <div class="col-md-6">
+                <table class="table" style="font-size: 14px"> 
+                  <thead> <tr> <th>Направление</th> <th>Тариф</th> </tr> </thead> 
+                 <tbody> 
+                  <tr class="active"> <td scope="row">Аэропорт - Лазаревское</td> <td>3300</td> </tr>
+                  <tr> <td scope="row">Аэропорт - Туапсе</td> <td>4500</td> </tr>
+                  <tr class="success"> <td scope="row">Аэропорт - Геленджик</td> <td>7900</td></tr>
+                  <tr> <td scope="row">Аэропорт - Краснодар</td> <td>9500</td></tr>
+                  <tr class="active"> <td scope="row">Аэропорт - Лоо</td> <td>1700</td></tr>
+                  <tr> <td scope="row">Аэропорт - Вардане</td> <td>2000</td></tr>
+                  <tr class="success"> <td scope="row">Аэропорт - Магри</td> <td>4500</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
       </div>
-    </div>
-  </div>
+    	</div>
+  	</div>
+<!-- End TarifTable-->
 
-  <div class="container marketing">
-
-        
+  	<div class="container marketing">        
            <!-- Three columns of text below the jumbotron -->
         <div class="row">
           <div class="col-md-12">
@@ -319,47 +348,7 @@
           </div>
         </div>
 
-        <!-- START THE FEATURETTES -->
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzUwMHg1MDAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1N2UzMTY5YWE5IHRleHQgeyBmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTU3ZTMxNjlhYTkiPjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjRUVFRUVFIi8+PGc+PHRleHQgeD0iMTg1LjE0ODQzNzUiIHk9IjI2MS40Ij41MDB4NTAwPC90ZXh0PjwvZz48L2c+PC9zdmc+" data-holder-rendered="true">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 col-md-push-5">
-            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5 col-md-pull-7">
-            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzUwMHg1MDAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1N2UzMTY3YTVhIHRleHQgeyBmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTU3ZTMxNjdhNWEiPjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjRUVFRUVFIi8+PGc+PHRleHQgeD0iMTg1LjE0ODQzNzUiIHk9IjI2MS40Ij41MDB4NTAwPC90ZXh0PjwvZz48L2c+PC9zdmc+" data-holder-rendered="true">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzUwMHg1MDAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1N2UzMTZhYTNlIHRleHQgeyBmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTU3ZTMxNmFhM2UiPjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjRUVFRUVFIi8+PGc+PHRleHQgeD0iMTg1LjE0ODQzNzUiIHk9IjI2MS40Ij41MDB4NTAwPC90ZXh0PjwvZz48L2c+PC9zdmc+" data-holder-rendered="true">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <!-- /END THE FEATURETTES -->
+      
 
 
         <!-- FOOTER -->
