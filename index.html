@@ -29,7 +29,6 @@
     modalTo.value = _To;
   }
   </script>
-
 </head>
 
 <body>
@@ -98,7 +97,7 @@
 		      <div class="row">
 		        <div class="col-md-12 text-center">
 		            <div class="form-group">
-		              <button type="button" class="btn btn-lg btn-success btn-sm" data-toggle="modal" onclick="getDirection()" data-target="#ZakazModal">Заказать такси</button>
+		              <button type="button" class="btn btn-lg btn-success" data-toggle="modal" onclick="getDirection()" data-target="#ZakazModal">Заказать такси</button>
 		            </div>
 		        </div>
 
@@ -107,8 +106,8 @@
 		</form>
 	</div>
 
-  <div class="container-fluid">
-
+  	<div class="container-fluid">
+  	<!---End Jumbotron-->
  	<div class="jumbotron">
     	<div class="text-center">
      		<h1>Заказать такси в Сочи</h1>
@@ -144,14 +143,14 @@
 								</div>	
 							</div>
 						</div>
-						<div class="row">
+						<div class="row col-md-6 col-md-offset-3">
 							<form>
 			    				<fieldset>
 			    					<div class="form-group">
 			    						<input type="text" name="PhoneNumber" placeholder="Ваш номер телефона" class="form-control"/>
 			    					</div>
 			    					<div class="form-group">
-			    						<button type="button" class="btn btn-lg btn-success btn-sm" data-toggle="modal" data-target="#ZakazModal">Перезвоните мне</button>
+			    						<button type="button" class="btn btn-lg btn-success" data-toggle="modal" data-target="#ZakazModal">Перезвоните мне</button>
 			    					</div>
 			    				</fieldset>
 			    			</form>
@@ -174,151 +173,142 @@
 					</div>
 				</div>
 			</div> 
- 	 	</div> 
+ 	 	</div>
+ 	</div> 
   <!---End Jumbotron-->
 
   <!--Start ModalLayer ZakazTaxi-->
 
-  <div class="modal fade" id="ZakazModal" tabindex="-1" role="dialog" aria-labelledby="ZakazModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <h4 class="modal-title" id="ZakazModalLabel">On-line заказ такси</h4>
-        </div>
-        <div class="modal-body"> 
-
-          <div class="row"> 
-            <div class="col-md-12 text-center"> 
-              <label class="sr-only" for="Name">Ваше имя</label> 
-              <input type="text" class="form-control" id="Name" placeholder="Ваше имя"> 
-            </div>     
-          </div> 
-
-          <div class=row> 
-            <div class="col-md-12 text-center"> 
-              <label class="sr-only" for="Phone">Номер телефона</label> 
-              <input type="text" class="form-control" id="Phone" placeholder="Номер телефона"> 
-            </div> 
-          </div> 
-
-          <div class="row">
-                <div class="col-md-6">
-                    <span id="directionSpan">Откуда:</span> 
-                    <input list="Direction" class="form-control" id="modalFrom"></input>
-                </div>
-                <div class="col-md-6">
-                    <span id="destinationSpan">Куда:</span> 
-                    <input list="Direction" class="form-control" id="modalTo"></input>
-                </div>
-          </div>
-
-          <div class="row"> 
-            <div class="col-md-6 text-center"> 
-              <div class="form-group"> 
-                <label class="sr-only" for="Data">Дата</label> 
-                <input type="text" class="form-control" id="Date" placeholder="Дата"> 
-              </div> 
-            </div> 
-            <div class="col-md-6 text-center"> 
-              <div class="form-group"> 
-                <label class="sr-only" for="Time">Время</label> 
-                <input type="text" class="form-control" id="Time" placeholder="Время"> 
-              </div> 
-            </div> 
-          </div> 
-
-        <script type="text/javascript"> 
-        $(function() { 
-        $('#Date').datetimepicker({ 
-        pickTime: false, 
-        language: 'ru' 
-        }); 
-        }); 
-        </script> 
-        <script type="text/javascript"> 
-        $(function() { 
-        $('#Time').datetimepicker({ 
-        pickDate: false, 
-        language: 'ru' 
-        }); 
-        }); 
-        </script> 
-
-          </div> 
-            <div class="modal-footer"> 
-              <div class="row"> 
-                <div class="col-md-12 text-center"> 
-                  <button type="button" class="btn btn-primary">Отправить заявку</button> 
-                </div> 
-              </div> 
-              <div class="row"> 
-                <div class="col-md-12 text-center"> 
-                <p><small>Введите данные и нажмите "Отправить заявку". Наши операторы перезвонят Вам в течении 10 минут</small></p> 
-                </div> 
-              </div> 
-            </div>
-   
-          </div>
-        </div>
-            
-          </form>
-          
-        </div>
-      </div>
+  	<div class="modal fade" id="ZakazModal" tabindex="-1" role="dialog" aria-labelledby="ZakazModalLabel" aria-hidden="true">
+    	<div class="modal-dialog" role="document">
+      		<div class="modal-content">
+        		<div class="modal-header">
+          			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            		<span aria-hidden="true">&times;</span>
+          			</button>
+          			<h4 class="modal-title" id="ZakazModalLabel">On-line заказ такси</h4>
+        		</div>
+        		<div class="modal-body">
+        			<form>
+        				<fieldset>
+		          			<div class="row"> 
+		            			<div class="col-md-12 text-center form-group"> 
+		              				<label class="sr-only" for="Name">Ваше имя</label> 
+		              				<input type="text" class="form-control" id="Name" placeholder="Ваше имя"> 
+		            			</div>     
+		          			</div>
+		          			<div class="row"> 
+		            			<div class="col-md-12 text-center form-group"> 
+		              				<label class="sr-only" for="Phone">Номер телефона</label> 
+		              				<input type="text" class="form-control" id="Phone" placeholder="Номер телефона"> 
+		            			</div> 
+		          			</div>
+		          			<div class="row">
+		                		<div class="col-md-6 form-group">
+		                    		<span id="directionSpan">Откуда:</span> 
+		                    		<input list="Direction" class="form-control" id="modalFrom"></input>
+		                		</div>
+		                		<div class="col-md-6 form-group">
+		                    		<span id="destinationSpan">Куда:</span> 
+		                    		<input list="Direction" class="form-control" id="modalTo"></input>
+		                		</div>
+		          			</div>
+		          			<div class="row"> 
+		            			<div class="col-md-6 text-center"> 
+		              				<div class="form-group"> 
+		                				<label class="sr-only" for="Data">Дата</label> 
+		                				<input type="text" class="form-control" id="Date" placeholder="Дата"> 
+		              				</div> 
+		            			</div> 
+		            			<div class="col-md-6 text-center"> 
+		              				<div class="form-group"> 
+		                				<label class="sr-only" for="Time">Время</label> 
+		                				<input type="text" class="form-control" id="Time" placeholder="Время"> 
+		              				</div> 
+		            			</div> 
+		          			</div>
+		          		</fieldset>
+	          		</form>
+         		</div>
+            	<div class="modal-footer"> 
+              		<div class="row"> 
+                		<div class="col-md-12 text-center"> 
+                  			<button type="button" class="btn btn-primary">Отправить заявку</button> 
+                		</div> 
+              		</div> 
+              		<div class="row"> 
+                		<div class="col-md-12 text-center"> 
+                			<p><small>Введите данные и нажмите "Отправить заявку". Наши операторы перезвонят Вам в течении 10 минут</small></p> 
+                		</div> 
+              		</div> 
+            	</div>
+          	</div>
+        </div>                     
     </div>
-  </div>
+
+ 		<script type="text/javascript"> 
+	        $(function() { 
+	        $('#Date').datetimepicker({ 
+	        pickTime: false, 
+	        language: 'ru' 
+	        }); 
+	        }); 
+	        </script> 
+	        <script type="text/javascript"> 
+	        $(function() { 
+	        $('#Time').datetimepicker({ 
+	        pickDate: false, 
+	        language: 'ru' 
+	        }); 
+	        }); 
+        </script> 
   <!--End ModalLayer ZakazTaxi-->
 
 <!--TarifTable-->
   	<div class="container">
     	<div class="row">
-          <div class="col-md-12">
-              <div class="text-center"> 
-                  <h3 style="font-family:Philosopher">Цены на такси в Сочи</h3>
-              </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="col-md-6">
-                <table class="table" style="font-size: 14px"> 
-                  <thead> <tr> <th>Направление</th> <th>Тариф</th> </tr> </thead> 
-                  <tbody> 
-                  <tr class="active"> <td scope="row">Аэропорт - Адлер</td> <td>500</td> </tr>
-                  <tr> <td scope="row">Аэропорт - Хоста</td> <td>700</td> </tr>
-                  <tr class="success"> <td scope="row">Аэропорт - Сочи</td> <td>900-1100</td></tr>
-                  <tr> <td scope="row">Аэропорт - Псоу</td> <td>700</td></tr>
-                  <tr class="active"> <td scope="row">Аэропорт - Красная поляна</td> <td>1300</td></tr>
-                  <tr> <td scope="row">Аэропорт - Роза Хутор</td> <td>1500 </td></tr>
-                  <tr class="success"> <td scope="row">Аэропорт - Олимпийский парк</td> <td>600</td></tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="col-md-6">
-                <table class="table" style="font-size: 14px"> 
-                  <thead> <tr> <th>Направление</th> <th>Тариф</th> </tr> </thead> 
-                 <tbody> 
-                  <tr class="active"> <td scope="row">Аэропорт - Лазаревское</td> <td>3300</td> </tr>
-                  <tr> <td scope="row">Аэропорт - Туапсе</td> <td>4500</td> </tr>
-                  <tr class="success"> <td scope="row">Аэропорт - Геленджик</td> <td>7900</td></tr>
-                  <tr> <td scope="row">Аэропорт - Краснодар</td> <td>9500</td></tr>
-                  <tr class="active"> <td scope="row">Аэропорт - Лоо</td> <td>1700</td></tr>
-                  <tr> <td scope="row">Аэропорт - Вардане</td> <td>2000</td></tr>
-                  <tr class="success"> <td scope="row">Аэропорт - Магри</td> <td>4500</td></tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-      </div>
-    	</div>
-  	</div>
+          	<div class="col-md-12">
+              	<div class="text-center"> 
+                  	<h3 style="font-family:Philosopher">Цены на такси в Сочи</h3>
+              	</div>
+          	</div>
+          	<div class="row">
+            	<div class="col-md-12">
+              		<div class="col-md-6">
+                		<table class="table" style="font-size: 14px"> 
+                  			<thead> <tr> <th>Направление</th> <th>Тариф</th> </tr> </thead> 
+                  			<tbody> 
+			                  <tr class="active"> <td scope="row">Аэропорт - Адлер</td> <td>500</td> </tr>
+			                  <tr> <td scope="row">Аэропорт - Хоста</td> <td>700</td> </tr>
+			                  <tr class="success"> <td scope="row">Аэропорт - Сочи</td> <td>900-1100</td></tr>
+			                  <tr> <td scope="row">Аэропорт - Псоу</td> <td>700</td></tr>
+			                  <tr class="active"> <td scope="row">Аэропорт - Красная поляна</td> <td>1300</td></tr>
+			                  <tr> <td scope="row">Аэропорт - Роза Хутор</td> <td>1500 </td></tr>
+			                  <tr class="success"> <td scope="row">Аэропорт - Олимпийский парк</td> <td>600</td></tr>
+                  			</tbody>
+                		</table>
+              		</div>
+              		<div class="col-md-6">
+                		<table class="table" style="font-size: 14px"> 
+                  			<thead> <tr> <th>Направление</th> <th>Тариф</th> </tr> </thead> 
+                 			<tbody> 
+			                  <tr class="active"> <td scope="row">Аэропорт - Лазаревское</td> <td>3300</td> </tr>
+			                  <tr> <td scope="row">Аэропорт - Туапсе</td> <td>4500</td> </tr>
+			                  <tr class="success"> <td scope="row">Аэропорт - Геленджик</td> <td>7900</td></tr>
+			                  <tr> <td scope="row">Аэропорт - Краснодар</td> <td>9500</td></tr>
+			                  <tr class="active"> <td scope="row">Аэропорт - Лоо</td> <td>1700</td></tr>
+			                  <tr> <td scope="row">Аэропорт - Вардане</td> <td>2000</td></tr>
+			                  <tr class="success"> <td scope="row">Аэропорт - Магри</td> <td>4500</td></tr>
+                  			</tbody>
+                		</table>
+              		</div>
+            	</div>
+          	</div>
+      	</div>
+    </div>
 <!-- End TarifTable-->
 
-  	<div class="container marketing">        
-           <!-- Three columns of text below the jumbotron -->
+  	<div class="container marketing">
         <div class="row">
           <div class="col-md-12">
             <div class="col-md-4">
@@ -347,16 +337,11 @@
             </div>
           </div>
         </div>
-
-      
-
-
         <!-- FOOTER -->
         <footer>
           <p class="pull-right"><a href="#">Back to top</a></p>
           <p>© 2016 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
         </footer>
-
-  </div> <!-- /container -->
+  	</div> <!-- /container -->
 </body>
 </html>
