@@ -31,7 +31,10 @@
   </script>
 </head>
 
-<body>
+<body style="background-image: url(image/b2.jpg);
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat">
 
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
@@ -42,7 +45,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="#">Такси "Катран" Сочи</a>
+	      <a class="navbar-brand" href="#">Такси "Сочи 24" </a>
 	    </div>
 
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -106,20 +109,20 @@
 		</form>
 	</div>
 
-  	<div class="container-fluid">
+  	<div class="container">
   	<!---End Jumbotron-->
- 	<div class="jumbotron">
+ 	<div class="jumbotron" style=" border-radius: 10px;">
     	<div class="text-center">
-     		<h1>Заказать такси в Сочи</h1>
+     		<h1 style="font-family: Phylosopher">Заказать такси в Сочи</h1>
     	</div>
     	<div class="row">
 		    <div class="col-md-12 text-center">
-		     	<p class="text-info"><small>Вы можете оформить заказ такси онлайн, позвонить по указанным телефонам, либо оставить свой номер и мы Вам перезвоним.</small></p>	   
+		     	<p class="text-info"><small>Добро пожаловать в Такси "Сочи 24". Вы можете оформить заказ такси онлайн, позвонить по указанным телефонам, либо оставить свой номер и мы Вам перезвоним.</small></p>	   
 		    </div>
 		</div>
     	<div class="row">
 			<div class="col-md-12">
-				<div class="col-md-6 text-center">
+				<div class="col-md-7 text-center">
 					<div class="container">
 						<div class="row">
 							<div class="col-md-6">
@@ -144,20 +147,20 @@
 							</div>
 						</div>
 						<div class="row col-md-6 col-md-offset-3">
-							<form>
+							<form action="/sms/send_sms.php" method="post">
 			    				<fieldset>
 			    					<div class="form-group">
-			    						<input type="text" name="PhoneNumber" placeholder="Ваш номер телефона" class="form-control"/>
+			    						<input type="text" id="PhoneNumber" name="PhoneNumber" placeholder="Ваш номер телефона" class="form-control"/>
 			    					</div>
 			    					<div class="form-group">
-			    						<button type="button" class="btn btn-lg btn-success" data-toggle="modal" data-target="#ZakazModal">Перезвоните мне</button>
+			    						<button type="submit" class="btn btn-lg btn-success" data-toggle="modal" data-target="#ZakazModal">Перезвоните мне</button>
 			    					</div>
 			    				</fieldset>
 			    			</form>
 						</div>				
 					</div>
 				</div>
-				<div class="col-md-6 hidden-xs">
+				<div class="col-md-5 hidden-xs">
 					<div class="container">
 						<div class="row">
 							<blockquote>
@@ -189,53 +192,55 @@
           			<h4 class="modal-title" id="ZakazModalLabel">On-line заказ такси</h4>
         		</div>
         		<div class="modal-body">
-        			<form>
-        				<fieldset>
-		          			<div class="row"> 
+        			<form id=zakaz method="post" action="/sms/send_sms.php">
+        			
+        				<fieldset class="form-group">
+		          			<div class="row form-group"> 
 		            			<div class="col-md-12 text-center form-group"> 
 		              				<label class="sr-only" for="Name">Ваше имя</label> 
-		              				<input type="text" class="form-control" id="Name" placeholder="Ваше имя"> 
+		              				<input type="text" class="form-control" id="Name" name="Name" placeholder="Ваше имя"> 
 		            			</div>     
 		          			</div>
-		          			<div class="row"> 
+		          			<div class="row form-group"> 
 		            			<div class="col-md-12 text-center form-group"> 
 		              				<label class="sr-only" for="Phone">Номер телефона</label> 
-		              				<input type="text" class="form-control" id="Phone" placeholder="Номер телефона"> 
+		              				<input type="text" class="form-control" id="Phone" name="Phone" placeholder="Номер телефона"> 
 		            			</div> 
 		          			</div>
 		          			<div class="row">
 		                		<div class="col-md-6 form-group">
 		                    		<span id="directionSpan">Откуда:</span> 
-		                    		<input list="Direction" class="form-control" id="modalFrom"></input>
+		                    		<input list="Direction" class="form-control" name="modalFrom" id="modalFrom"></input>
 		                		</div>
 		                		<div class="col-md-6 form-group">
 		                    		<span id="destinationSpan">Куда:</span> 
-		                    		<input list="Direction" class="form-control" id="modalTo"></input>
+		                    		<input list="Direction" class="form-control" name="modalTo" id="modalTo"></input>
 		                		</div>
 		          			</div>
 		          			<div class="row"> 
 		            			<div class="col-md-6 text-center"> 
 		              				<div class="form-group"> 
 		                				<label class="sr-only" for="Data">Дата</label> 
-		                				<input type="text" class="form-control" id="Date" placeholder="Дата"> 
+		                				<input type="text" class="form-control" name="Date" id="Date" placeholder="Дата"> 
 		              				</div> 
 		            			</div> 
 		            			<div class="col-md-6 text-center"> 
 		              				<div class="form-group"> 
 		                				<label class="sr-only" for="Time">Время</label> 
-		                				<input type="text" class="form-control" id="Time" placeholder="Время"> 
+		                				<input type="text" class="form-control" name="Time" id="Time" placeholder="Время"> 
 		              				</div> 
 		            			</div> 
+		            			<div class="row"> 
+                					<div class="col-md-12 text-center"> 
+                  						<button type="submit" class="btn btn-primary"> Отправить заявку
+                  						</button> 
+                					</div> 
+              					</div> 
 		          			</div>
 		          		</fieldset>
 	          		</form>
          		</div>
             	<div class="modal-footer"> 
-              		<div class="row"> 
-                		<div class="col-md-12 text-center"> 
-                  			<button type="button" class="btn btn-primary">Отправить заявку</button> 
-                		</div> 
-              		</div> 
               		<div class="row"> 
                 		<div class="col-md-12 text-center"> 
                 			<p><small>Введите данные и нажмите "Отправить заявку". Наши операторы перезвонят Вам в течении 10 минут</small></p> 
@@ -316,31 +321,31 @@
                 <img class="img-circle" src="image/money.png" alt="Дешевое такси в Сочи" width="140" height="140">
               </div>
               <h2>Такси дешево</h2>
-              <p>Доступная цена поездок. Куда бы ни пришлось ехать нашему клиенту, Сочи,  на вокзал, в  аэропорт, Красную поляну - заказ такси предполагает прозрачный расчет стоимости поездки. Ездить с нами удобно и дешево.</p>
-              <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+              <p>Доступная цена поездок. Наши тарифы на поездку всегда прозрачны и уточняются во время заказа. Мы работаем без посредников, что позволяет нам обеспечивать приемлемую стоимость и высокий уровень качества. Мы предлагаем Вам совершить поездки на такси по Сочи за умеренную стоимость и без обмана</p>
+              <p><a class="btn btn-default" href="About.html" role="button">Подробнее...</a></p>
             </div>
             <div class="col-md-4">
               <div class="text-center">
                 <img class="img-circle" src="image/medal.png" alt="Хорошее такси в Сочи" width="140" height="140">
               </div>
               <h2>Безупречный сервис</h2>
-              <p>Такси Катран в Сочи работает по стандартам, которые не уступают мировым. Автомобильный парк включает только новые иномарки. Опытные и вежливые водители такси, внимательные и предупредительные диспетчеры - ваш комфорт для нас на первом месте.</p>
-              <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+              <p>Такси "Сочи 24" является ведущей команией, оказывающей услуги пассажирских перевозок и такси в Сочи. В парке компании автомобили только иностранного производства, оборудованные кондиционерами и детскими удерживающими устройствами.</p>
+              <p><a class="btn btn-default" href="About.html" role="button">Подробнее...</a></p>
             </div>
             <div class="col-md-4">
               <div class="text-center">
                 <img class="img-circle" src="image/aeroplane.png" alt="Такси из Аэропорта Сочи" width="140" height="140">
               </div>
               <h2>Встреча в аэропорту</h2>
-              <p>Заказ такси в аэропорт Сочи больше не является проблемой. Такси будет подано точно ко времени, оговоренному заранее. Больше не нужно искать такси в аэропорту Сочи и беспокоится о ценах. Такси Катран всегда приезжают на место без опозданий.</p>
-              <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+              <p>Если Вы прибываете в Аэроопрт Сочи мы советуем заказать такси в Аэропорт заранее. Наша компания гарантирует подачу автомобиля и встречу в аэропорту. Вежливые водители помогут с багажом. В случае задержки рейса - ожидание бесплатно.</p>
+              <p><a class="btn btn-default" href="About.html" role="button">Подробнее...</a></p>
             </div>
           </div>
         </div>
         <!-- FOOTER -->
         <footer>
-          <p class="pull-right"><a href="#">Back to top</a></p>
-          <p>© 2016 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+          <p class="pull-right"><a href="index.html">Вернуться на верх</a></p>
+          <p>© 2016 Company, Inc.</p>
         </footer>
   	</div> <!-- /container -->
 </body>

@@ -28,7 +28,7 @@ class SendMailSmtpClass {
     public $smtp_port;
     public $smtp_charset;
     
-    public function __construct($smtp_username, $smtp_password, $smtp_host, $smtp_from, $smtp_port = 587, $smtp_charset = "utf-8") {
+    public function __construct($smtp_username, $smtp_password, $smtp_host, $smtp_from, $smtp_port = 25, $smtp_charset = "utf-8") {
         $this->smtp_username = $smtp_username;
         $this->smtp_password = $smtp_password;
         $this->smtp_host = $smtp_host;
@@ -61,7 +61,7 @@ class SendMailSmtpClass {
                 throw new Exception('Connection error');
             }
 			
-			$server_name = $_SERVER["SERVER_NAME"];
+			$server_name = 'smtp.yandex.ru';
             fputs($socket, "HELO $server_name\r\n");
             if (!$this->_parseServer($socket, "250")) {
                 fclose($socket);

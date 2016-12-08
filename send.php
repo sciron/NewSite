@@ -16,14 +16,14 @@
 
 require_once "SendMailSmtpClass.php"; // подключаем класс
  
-$mailSMTP = new SendMailSmtpClass('zakaz@katran-sochi.com', '4f499a5b', 'mx1.hostinger.ru', 'Zakaz'); // создаем экземпляр класса
+$mailSMTP = new SendMailSmtpClass('kozin.au@ya.ru', '!4f499a5b', 'smtp.yandex.ru', 'Zakaz', 465); // создаем экземпляр класса
 // $mailSMTP = new SendMailSmtpClass('логин', 'пароль', 'хост', 'имя отправителя');
 
  
 // заголовок письма
 $headers= "MIME-Version: 1.0\r\n";
 $headers .= "Content-type: text/html; charset=utf-8\r\n"; // кодировка письма
-$headers .= "From: Zakaz <zakaz@katran-sochi.com>\r\n"; // от кого письмо
+$headers .= "From: Zakaz <kozin.au@ya.ru>\r\n"; // от кого письмо
 $result =  $mailSMTP->send('kozin.alex@gmail..com', 'Заказ такси', 'Текст письма', $headers); // отправляем письмо
 // $result =  $mailSMTP->send('Кому письмо', 'Тема письма', 'Текст письма', 'Заголовки письма');
 if($result === true){
