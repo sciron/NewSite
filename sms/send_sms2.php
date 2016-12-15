@@ -18,14 +18,9 @@ include_once ("ssms_su.php");
 
 
 
-$Name = $_POST['Name'];
-$Phone = $_POST['Phone'];
-$modalFrom = $_POST['modalFrom'];
-$modalTo = $_POST['modalTo'];
-$Date = $_POST['Date'];
-$Time = $_POST['Time'];
+
 $PhoneNumber = $_POST['PhoneNumber'];
-$massage = "Name: " . $Name ."_" ."Nomer: " . $Phone ."_" . "Otkuda: " . $modalFrom ."_" ."Kuda: " . $modalTo ."_" . "Kogda: " . $Date ." " . $Time;
+$massage = "Перезвоните мне по номеру- " . $PhoneNumber;
 
 $phone = '79857795930'; // Телефон абонента
 $email = 'kozin.au@yandex.ru'; // Логин в системе

@@ -2,8 +2,8 @@
 RewriteBase /
 Options +FollowSymLinks
 RewriteEngine On
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP
-RewriteRule ^index\.php$ http://taxi-sochi24.ru/ [R=301,L]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP
+RewriteRule ^index\.hmtl$ http://taxi-sochi24.ru/ [R=301,L]
 Options +FollowSymLinks
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^taxi-sochi24\.ru$ [NC]
